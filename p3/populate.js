@@ -17,7 +17,7 @@ for (let i = 1; i <= projectNr; i++) {
 
     img.src = `images/work_page/W (${i}).jpg`;
     img.loading = "lazy";
-    a.href = `#project`;
+    a.href = `project.html`;
     p.innerHTML = "";
 
     div.appendChild(a);
