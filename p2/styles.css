@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #6ECCAF;
+    --sec-color: #CFFDE1;
+    --accent-color: #002F2F;
+}
+
+*::selection {
+    background: var(--sec-color);
+}
+
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+main {
+    display: grid;
+
+    /* animation: slide-main 1s 7s linear forwards; */
+}
+
+@keyframes slide-main {
+    from {
+        transform: translateY(100vh);
+    }
+}
+
+section {
+    display: grid;
+    justify-self: center;
+    margin: auto 5%;
+}
+
+@media (min-width: 1500px) {
+    section {
+        max-width: 90ch;
+    }
+
+    .h2-wrapper {
+        width: calc((100vw - 90ch)/2);
+    }
+}
+
+@media (max-width: 1500px) {
+    section {
+        max-width: 80ch;
+    }
+
+    .h2-wrapper {
+        width: calc((100vw - 80ch)/2);
+    }
+}
+
+.footer {
+    margin-top: 100vh;
+    position: fixed;
+    width: 100vw;
+    /* bottom: 0; */
+    padding: 20px 0;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: #6eccaeb9;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+
+    animation: slide-footer 1s 5s linear forwards;
+}
+
+@keyframes slide-footer {
+    from {
+        --offset: calc(15vmin + 40px);
+        transform: translateY(var(--offset));
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+
+.logo-symbol {
+    justify-self: center;
+    cursor: pointer;
+    --size: 7vmin;
+    width: var(--size);
+    height: var(--size);
+
+    background-color: var(--accent-color);
+    clip-path: polygon(37.5% 0, 62.5% 0, 62.5% 37.5%, 100% 37.5%, 100% 62.5%, 62.5% 62.5%, 62.5% 100%, 37.5% 100%, 37.5% 62.5%, 0% 62.5%, 0% 37.5%, 37.5% 37.5%);
+}
+
+.logo-symbol:hover,
+.logo-symbol:active,
+.logo-symbol:focus {
+    background-color: #fff;
+    transition: .3s ease;
+}
+
+.active {
+    background-color: #fff;
+    transition: .3s ease;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: var(--accent-color);
+    z-index: 1;
+    animation: slide-header 1s 7s linear forwards;
+}
+
+
+@keyframes slide-header {
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+#h1-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 100vw;
+    height: 10vmin;
+    background-color: var(--accent-color);
+
+    animation: h1-overlay 1s 5s linear forwards;
+}
+
+@keyframes h1-overlay {
+    to {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 7vmin;
+    color: #fff;
+
+    border-right: .1em solid #fff;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    /* animation: typing 2s 1s steps(20, end) forwards,
+        deleting 2s 5s steps(20, end) forwards,
+        blink-caret .3s step-end infinite alternate,
+        fader .1s 8s forwards; */
+    animation: typing 2s 1s steps(20, end) forwards,
+        blink-caret .3s step-end infinite alternate;
+}
+
+@keyframes typing {
+    to {
+        width: 18ch;
+    }
+}
+
+@keyframes deleting {
+    to {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes fader {
+    to {
+        opacity: 0;
+    }
+}
+
+
+h2 {
+    position: relative;
+    font-family: 'Mirza', sans-serif;
+    font-weight: 600;
+    font-size: clamp(3rem, 5vw, 5rem);
+    color: var(--accent-color);
+}
+
+h3 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+    color: var(--accent-color);
+    margin-top: 15px;
+}
+
+p,
+li {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    color: var(--accent-color);
+    line-height: 1.4;
+}
+
+p {
+    padding: 5px 0;
+    text-align: justify;
+}
+
+ul {
+    padding-left: 3rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    margin: 15px 0;
+}
+
+
+#zooming {
+    cursor: zoom-in;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#modal-content {
+    cursor: zoom-out;
+    margin: 5%;
+    width: 90%;
+}
+
+
+.scenario {
+    margin: 30px 0;
+}
+
+
+/******* CAROUSEL *******/
+.carousel-wrapper {
+    width: 100vw;
+    background-color: var(--sec-color);
+    margin: 30px 0;
+}
+
+.container {
+    width: 90vw;
+    margin: auto;
+}
+
+.carousel img {
+    height: 60vh;
+}
+
+
+.font-picks {
+    background-color: var(--main-color);
+}
+
+.color-swatches {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.color-swatches>div {
+    --size: 10vmin;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
+
+.color-swatches>div:nth-of-type(1) {
+    background-color: #CFFDE1;
+}
+
+.color-swatches>div:nth-of-type(2) {
+    background-color: #ADE792;
+}
+
+.color-swatches>div:nth-of-type(3) {
+    background-color: #6ECCAF;
+}
+
+.color-swatches>div:nth-of-type(4) {
+    background-color: #3D5656;
+}
+
+.color-swatches>div:nth-of-type(5) {
+    background-color: #002F2F;
+}
+
+
+video {
+    position: relative;
+    display: block;
+    margin: 30px auto 220px;
+    /* background-color: var(--sec-color); */
+}
+
+.back-arrow {
+    background-image: url(images/left-arrow_dark-green.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    --size: 85px;
+    width: var(--size);
+    height: var(--size);
+    left: 0;
+    top: 0;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.back-arrow:hover,
+.back-arrow:active,
+.back-arrow:focus {
+    background-image: url(images/left-arrow_white.png);
+    background-color: var(--accent-color);
+    transition: all .5s ease;
+}
+
+aside {
+    display: none;
+    position: fixed;
+    bottom: calc(7vmin + 70px);
+    right: 5%;
+    cursor: pointer;
+    z-index: 2;
+
+    background: #6eccaeb9;
+    backdrop-filter: blur(5px);
+
+    background-image: url(images/up-arrow_dark-green.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+
+    --up-size: 85px;
+    width: var(--up-size);
+    height: var(--up-size);
+    border-radius: 50%;
+}

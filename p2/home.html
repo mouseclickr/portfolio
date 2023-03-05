@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Libre+Franklin:wght@400;600&family=Mirza:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- favicon mouseclickr -->
+    <link rel="icon" href="../images/favicon.ico">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/f3b5e98be9.js" crossorigin="anonymous"></script>
+
+    <!-- tiny slider carousel -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <title>Mobile app > Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>App design with Figma</h1>
+        <div id="h1-box"></div>
+    </header>
+
+    <nav class="footer">
+        <a href="#context" class="logo-symbol"></a>
+        <a href="#research" class="logo-symbol"></a>
+        <a href="#analysis" class="logo-symbol"></a>
+        <a href="#concept" class="logo-symbol"></a>
+        <a href="#result" class="logo-symbol"></a>
+    </nav>
+
+    <main>
+        <a href="../projects.html" class="back-arrow"></a>
+
+        <section class="section-text" id="context">
+            <div class="h2-wrapper"></div>
+            <h2>Context</h2>
+
+            <p>The intended users of this app are patients, medical professionals would still work withing the
+                same
+                informatic system. The CAS app is designed to make a connection between that system and the
+                users,
+                making the use of paper redundant. In order for users to log in, they would have to get a
+                security
+                password from their family physician, to ensure that the app is conected to the National
+                Healthcare
+                System.</p>
+            <p>However, for this app to fully function, changes in the healthcare system would be necessary. For
+                example: prescriptions and referrals shouldn't be in-person events (unless one really wants to),
+                physicians should be able to write everything in a database, not on paper, and communicate over
+                the
+                phone/app, an intercounty database should be the default option.</p>
+            <p>With this in mind, the app is meant to be used not just by a segment of population that is
+                tech-savvy,
+                but
+                by other smartphone users too. So functionality is key: the sign-in process should be smooth and
+                simple,
+                its structure should be straightforward, the language should avoid any misunderstanding.
+            </p>
+        </section>
+
+        <section class="section-text" id="research">
+            <div class="h2-wrapper"></div>
+            <h2>Research</h2>
+
+            <p>From my findings, there is no competition for this kind of app. The only thing that comes closer is
+                "Dosarul Electronic de Sănătate" (DES) - a CNAS initiative to make the patients medical history
+                easily
+                available to medical professionals. But this is a platform that basically logs online your medical
+                paper
+                trail and lets you read it.</p>
+            <p>Let's review some of the aspects that make the current system suboptimal. </p>
+
+            <div class="scenario">
+                <h3>Scenario 1</h3>
+                <img src="./images/scenario 1.png" alt="">
+                <p>You have an acute condition and your GP asks for tests and a specialist consultation. All these
+                    include taking paper documents from one point to another. Drawbacks in using the current "paper
+                    system":
+                <ul>
+                    <li>you cannot understand the medic's handwriting</li>
+                    <li>you lose it</li>
+                    <li>you put it somewhere and it gets torn</li>
+                    <li>you always have to have both: paper & card</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="scenario">
+                <h3>Scenario 2</h3>
+                <img src="./images/scenario 2.png" alt="">
+                <p>You have a cronic disease which requires on-going treatment with a specialist from another part
+                    of
+                    the country. The treatment involves anual check-ups and prescriptions every 90 days. For each
+                    renewal you have to make a trip to that physician or send your card to someone in order to get
+                    the
+                    new prescription.
+                </p>
+            </div>
+
+            <div class="scenario">
+                <h3>Scenario 3</h3>
+                <img src="./images/scenario 3.png" alt="">
+                <p>You go to the pharmacy with a prescription. The handwriting on it is illegible and you have to
+                    trust
+                    the pharmacist to understand it. Your health card can't be scanned, it has to be inserted in a
+                    card
+                    reader with a short cord, so you are required to say your PIN aloud, and anyone can hear it.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="section-text" id="analysis">
+            <div class="h2-wrapper"></div>
+            <h2>Analysis</h2>
+
+            <p>To illustrate my findings, I put together 3 user personas. In using the healthcare system, they all
+                gravitate toward the same goals, but due to their age, they prioritize things differently:</p>
+
+            <img id="zooming" src="./images/user-personas.png" alt="">
+
+            <div id="modal">
+                <img id="modal-content" src="./images/user-personas.png" alt="">
+            </div>
+
+            <ul>
+                <li>a young mother of three wants efficiency and structure</li>
+                <li>a traveling woman with no time to spare wants less time on the road for useless things that
+                    could be
+                    done through an app</li>
+                <li>a retired lady with cancer treatment wants less time spent in the physician's waiting area or
+                    traveling to another county for each prescription renewal just beacause that's where her
+                    oncologist
+                    is</li>
+            </ul>
+
+        </section>
+
+        <section class="section-text" id="concept">
+            <div class="h2-wrapper"></div>
+            <h2>Concept</h2>
+
+            <p>The already existing - let's pretend always functioning - DES platform is very useful, and since you
+                can
+                access it with a securely generated password received from your GP, I consider it beneficial to be
+                in
+                connection with the CAS app. If both can be accessed with the same password, why not have them in
+                the
+                same place? They would complement each other, so that a patient could easily find any medical
+                information.</p>
+            <p>Since all you need to log in is a password, there is no sign-in / sign-up options, no email address,
+                as
+                older people may not have one or don't check it regularly. All medical documents received from
+                healtcare
+                providers would be managed through the app, so there is no real need for an email. </p>
+            <h3>Wireframes</h3>
+            <p>Slider navigation options: autoplay | mouse drag | swipe | arrow keys</p>
+        </section>
+
+        <div class="carousel-wrapper">
+            <div class="container">
+                <div class="carousel"></div>
+            </div>
+        </div>
+
+        <section>
+            <p>A bar code easily accessible from any page would be the thing that replaces the card. Instead of
+                having a
+                card introduced in a card reader, that doesn't always function, you would reveal the bar code to be
+                scanned. </p>
+            <p>Other than the DES button to access your medical history, the app contains 4 more sections (buttons
+                on
+                main page): family physician, pharmacy, specialist physician, medical investigations. It works like
+                this: users would ask their GP for a referral, the GP sends one back, but this will go to the
+                specialist
+                section, because that's where they would use it. The specialist in return sends a referral for an
+                MRI,
+                and that would be logged in the investigations section. Any prescription sent by a physician would
+                enter
+                the pharmacy section. </p>
+            </div>
+
+            <h3>Font picks</h3>
+            <img class="font-picks" src="./images/font-picks.png" alt="">
+
+            <h3>Color swatches</h3>
+            <div class="color-swatches">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        </section>
+
+        <section class="section-text" id="result">
+            <div class="h2-wrapper"></div>
+            <h2>Result</h2>
+            <p>This app was not design to replace in-person annual check-ups, and patients should still physically
+                report to professionals when necessary. However, as we've seen recently, unexpected events can
+                quickly
+                prove technologies to be critical.</p>
+
+            <video controls preload="none" height="575" width="300" src="./video/CASapp-compressed.mp4"></video>
+
+        </section>
+
+    </main>
+    <aside id="up"></aside>
+
+</body>
+
+</html>
