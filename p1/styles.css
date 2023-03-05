@@ -44,10 +44,14 @@ span {
     padding: 15px;
 }
 
-.about>p,
+.about-inner>p,
 article>p {
     font-size: clamp(1rem, 1.3vw, 1.3rem);
     padding: 5px 15px;
+}
+
+.about-inner {
+    text-align: justify;
 }
 
 article {
@@ -579,6 +583,12 @@ footer {
 
 .fa-location-dot {
     margin: 1.5rem 0 0 1rem;
+}
+
+@media (min-width:900px) {
+    .about-inner {
+        padding: 70px;
+    }
 }
 
 @media (max-width:600px) {
