@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+*::-moz-selection {
+    background: #E6B31E;
+}
+
+*::selection {
+    background: #E6B31E;
+}
+
+body {
+    background-color: #343434;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* *** HEADER *** */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+.nav-container {
+    width: 100%;
+    height: 85px;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* w/o these two below, "translateY(2px)" doesn't work */
+#see>a {
+    float: right;
+}
+
+#back>a {
+    float: left;
+}
+
+
+@media (min-width: 1201px) {
+
+    .nav-container {
+        box-shadow: inset 0px 0px 10px 0px rgb(0, 0, 0);
+        /* animation: carver 2s 1s ease forwards; */
+    }
+
+    .menu {
+        height: 100%;
+    }
+
+    #title {
+        cursor: default;
+        font-size: 3rem;
+        text-align: center;
+        margin: 5px auto;
+        color: #343434;
+    }
+
+    #title>p {
+        padding-top: 15px;
+    }
+
+    #nav-box {
+        position: absolute;
+        left: 233px;
+        width: calc(100% - 466px);
+        height: 85px;
+        background-color: #29BB89;
+        z-index: -1;
+        animation: slide-large 2s ease;
+    }
+
+    #back,
+    #see {
+        width: 235px;
+        height: 100%;
+        font-size: 1.15rem;
+        padding: 36px 25px 24px;
+        color: #fff;
+        text-align: center;
+    }
+
+    #back:hover,
+    #see:hover,
+    #back:active,
+    #see:active {
+        background-color: #343434;
+        box-shadow:
+            inset 0px 0px 2px #29BB89,
+            inset 0px 0px 4px #29BB89,
+            inset 0px 0px 8px #29BB89,
+            inset 0px 0px 16px #29BB89;
+        transition: all ease 0.2s;
+        transform: scale(0.98);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-container {
+        width: 100%;
+        height: 135px;
+        align-items: flex-start;
+    }
+
+    #title {
+        /* these two lines below puts title first when flexing */
+        order: -1;
+        flex: 1 0 100%;
+
+        font-size: 2rem;
+        text-align: center;
+        color: #343434;
+        padding: 10px 0;
+        margin-top: 7px;
+    }
+
+    #back,
+    #see {
+        font-size: 1.15rem;
+        font-weight: normal;
+        width: 50%;
+        margin: 6px 0;
+        padding: 17px 25px 13px;
+        box-shadow:
+            inset 0px 0px 2px #29BB89,
+            inset 0px 0px 4px #29BB89,
+            inset 0px 0px 8px #29BB89,
+            inset 0px 0px 16px #29BB89;
+        transition: all ease 0.2s;
+        transform: translateY(2px);
+    }
+
+    #see {
+        text-align: right;
+    }
+
+    #back:hover,
+    #see:hover,
+    #back:active,
+    #see:active {
+        box-shadow:
+            inset 0px 0px 2px #fff,
+            inset 0px 0px 4px #fff,
+            inset 0px 0px 8px #fff,
+            inset 0px 0px 16px #fff;
+    }
+
+    #nav-box {
+        position: absolute;
+        background-color: #29BB89;
+        z-index: -1;
+        width: 100%;
+        height: 63px;
+        animation: slide-medium 2s ease;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-container {
+        width: 100%;
+        height: 166px;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    #title {
+        width: 100%;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    #back,
+    #see {
+        width: 100%;
+        font-size: .9rem;
+        padding: 17px 20px 13px;
+        margin: 3px 0;
+    }
+
+    #nav-box {
+        height: 47px;
+        animation: slide-small 2s ease;
+    }
+}
+
+
+@keyframes slide-large {
+    from {
+        transform: translateY(-85px);
+    }
+}
+
+@keyframes slide-medium {
+    from {
+        transform: translateY(-63px);
+    }
+}
+
+@keyframes slide-small {
+    from {
+        transform: translateY(-47px);
+    }
+}
+
+
+/* *** MAIN *** */
+
+.content {
+    margin: 30px 5%;
+    cursor: default;
+}
+
+#number {
+    font-size: clamp(2rem, 4vw, 7rem);
+    font-weight: bold;
+    opacity: .5;
+}
+
+#number>p {
+    transform: translateY(1rem);
+}
+
+#bar {
+    width: 100%;
+    height: 1rem;
+    box-shadow:
+        inset 0 -10px 10px -5px rgba(0, 0, 0, .5);
+}
+
+.texts {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.texts>div {
+    flex: 1 1 500px;
+    width: 50%;
+    box-shadow: inset 0px 0px 10px 0px rgb(0, 0, 0);
+}
+
+.texts>div:hover,
+.texts>div:active,
+.texts>div:focus {
+    transition: all ease 0.2s;
+}
+
+.title-box {
+    background-color: #29BB89;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: bold;
+    color: #343434;
+    padding: 0 0 10px 15px;
+}
+
+.title-box p {
+    font-family: 'Mirza', cursive;
+    font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+}
+
+.text-box {
+    padding: 15px;
+}
+
+.text-box>p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    margin-bottom: 15px;
+}
+
+.text-box a {
+    color: #29BB89;
+}
+
+p>a:hover,
+p>a:active,
+p>a:focus {
+    color: #E6B31E;
+}
+
+a[target='_blank'] {
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+ol li {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    counter-increment: my-counter;
+    background-color: rgba(41, 187, 136, 0.2);
+}
+
+ol li::before {
+    content: counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(1)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(2)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(3)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(4)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(5)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(6)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(7)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(8)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+ol li:nth-child(9)::before {
+    content: "0" counter(my-counter) ".";
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-right: 0.5rem;
+}
+
+li:nth-child(n) {
+    padding: 4px 0;
+    margin-bottom: 7px;
+}

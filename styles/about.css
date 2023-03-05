@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #29BB89;
+    --accent-color: #FCFAF1;
+}
+
+*::selection {
+    background-color: var(--accent-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a,
+a:visited {
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    font-family: 'Mirza', cursive;
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 0 15px 5px;
+    display: block;
+    text-align: center;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: var(--main-color);
+}
+
+p {
+    line-height: 1.5;
+}
+
+/******* PARALLAX *******/
+
+.parallax {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 0;
+
+    background-image: url(../images/about/greeting_large.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: fader 1s linear forwards;
+}
+
+@keyframes fader {
+    to {
+        opacity: 1;
+    }
+}
+
+.group {
+    position: relative;
+}
+
+#g1 {
+    height: 120vh;
+}
+
+#g2 {
+    height: 150vh;
+}
+
+#g3 {
+    height: 100vh;
+}
+
+#g4 {
+    height: 100vh;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--main-color);
+}
+
+#g2 .layer {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+.forefront {
+    display: grid;
+    gap: 30px;
+    max-width: 80ch;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.text {
+    border-right: 15px solid #343434;
+    border-bottom: 3px solid #343434;
+}
+
+h2 {
+    font-family: 'Mirza', cursive;
+    font-size: clamp(3rem, 5vw, 5rem);
+    text-align: left;
+    padding-left: 15px;
+    color: var(--accent-color);
+    border-left: 15px solid #343434;
+    border-bottom: 3px solid #343434;
+}
+
+p {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #343434;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    padding: 10px 15px;
+}
+
+.bold {
+    font-weight: 600;
+    background-color: #343434;
+    color: var(--main-color);
+}
+
+button {
+    border: none;
+    width: calc(100% - 30px);
+    background-color: #343434;
+    transform: translateX(15px);
+}
+
+button a {
+    display: block;
+    padding: 10px 0 15px;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#title {
+    font-size: 2rem;
+    opacity: .85;
+}
+
+@media (max-width:500px) {
+    .parallax {
+        background-image: url(../images/about/greeting_small.png);
+    }
+}
+
+/******* CARD *******/
+
+@media (min-aspect-ratio: 1/1) {
+
+    .card {
+        --wh: 40vmin;
+        width: var(--wh);
+        height: var(--wh);
+    }
+
+    #title {
+        padding-top: calc(var(--wh) - 7rem);
+    }
+
+}
+
+@media (max-aspect-ratio: 1/1) {
+
+    .card {
+        --whs: 70vmin;
+        width: var(--whs);
+        height: var(--whs);
+    }
+
+    .content.is-flipped {
+        transform: rotateY(.5turn);
+    }
+
+    #title {
+        padding-top: calc(var(--whs) - 7rem);
+    }
+}
+
+.card {
+    display: grid;
+    justify-self: center;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-style: preserve-3d;
+}
+
+.card:hover .content {
+    transform: rotateY(.5turn);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: grid;
+    place-content: center;
+    transform-style: preserve-3d;
+}
+
+.card-front {
+    color: var(--main-color);
+    background-image: url(../images/about/me.jpg);
+    background-size: cover;
+    outline: 3px solid var(--main-color);
+    outline-offset: -1rem;
+}
+
+.card-back {
+    background-color: var(--accent-color);
+    color: #343434;
+    transform: rotateY(.5turn);
+}
+
+#title {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#resume {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #343434;
+}
+
+#resume:hover {
+    color: var(--main-color);
+}
+
+.down-arrow {
+    position: absolute;
+    background-image: url(../images/about/down-arrow_green.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+
+    width: 85px;
+    height: 85px;
+    left: 5%;
+    bottom: -85px;
+}
+
+#g1 .down-arrow {
+    top: 85vh;
+}
+
+aside {
+    position: fixed;
+    display: none;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 2;
+
+    background: rgba(52, 52, 52, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+
+    background-image: url(../images/about/up-arrow_white-ish.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+
+    --up-size: 85px;
+    width: var(--up-size);
+    height: var(--up-size);
+    border-radius: 50%;
+}

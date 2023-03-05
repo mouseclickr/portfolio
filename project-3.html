@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Libre+Franklin:wght@400;600&family=Mirza:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- favicon mouseclickr -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/f3b5e98be9.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/project.css">
+
+    <title>Web re_design</title>
+</head>
+
+<body>
+    <header>
+        <div id="nav-box"></div>
+        <div class="nav-container">
+            <div class="menu">
+                <a href="#projects" id="back">BACK TO PROJECTS</a>
+                <div id="title">
+                    <p>WEBSITE FOR ARCHITECTS</p>
+                </div>
+                <a href="./p3/home.html" id="see">SEE THIS PROJECT</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <div id="number">
+                <p>III</p>
+            </div>
+            <div id="bar"></div>
+            <div class="texts">
+                <div id="existing">
+                    <div class="title-box">
+                        <p>Existing</p>
+                    </div>
+                    <div class="text-box">
+                        <p>This is a real website (see <a target="_blank" href="https://www.arhigrup.ro/">here</a>),
+                            built with a
+                            template that isn't always doing what it
+                            should. Since I was involved in its design, I didn't want to do a complete makeover, but try
+                            to improve its drawbacks:
+                        </p>
+                        <ol>
+                            <li>the font is too small for large screens</li>
+                            <li>the top right buttons are small and change on hover is barely visible</li>
+                            <li>home page sliding Carousel is a bit lagging on large screens</li>
+                            <li>"Work" page has a uneven grid, hardly responsive - some images appear smaller than the
+                                rest on mobile</li>
+                            <li>image load is slow</li>
+                            <li>Lightbox is slow and changes size as images change size</li>
+                            <li>"About" page has very long lines of text, that makes reading annoying</li>
+                            <li>the footer isn't fixed to bottom, which on large screens is visually distracting</li>
+                            <li>Facebook icon isn't visible on desktop using Firefox, but is visible in Chrome and it
+                                makes the vertical scrollbar visible on the home page </li>
+                            <li>current year doesn't update (see Copyright line in footer)</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="proposal">
+                    <div class="title-box">
+                        <p>Proposal</p>
+                    </div>
+                    <div class="text-box">
+                        <p>
+                            Small changes make for an improved user experience:
+                        </p>
+                        <ol>
+                            <li>changed the fonts for nav bar and other texts, to be scalable according to screen size
+                            </li>
+                            <li>buttons are bigger and change on hover is substantial</li>
+                            <li>changed Carousel from sliding to fade-in</li>
+                            <li>the image grid is even, with multiple breakpoints for every screen size</li>
+                            <li>image load is much faster, and one can no longer see a lag</li>
+                            <li>improved Lightbox, that stays in place, no matter the image size </li>
+                            <li>redid the entire "About" page, with scalable fonts and lines no longer than 80ch
+                            </li>
+                            <li>the footer is fixed to bottom on pages where it should (for medium and large screens)
+                                and has a different layout</li>
+                            <li>all icons are visible on both mobile and other screens - I also included location and
+                                links
+                                to mail and phone apps, making the contact page redundant</li>
+                            <li>current year updates automatically, with a minimal script.js</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
