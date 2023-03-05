@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- favicon mouseclickr -->
+    <link rel="icon" href="../images/favicon.ico">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/f3b5e98be9.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="populate.js" defer></script>
+
+    <title>Website for architects > Work</title>
+</head>
+
+<body>
+    <header>
+        <nav role="navigation">
+
+            <div class="nav-c">
+                <div class="logo">
+                    <a href="#home">
+                        <img id="logo" src="images/logo-ARHI-GRUP.png" alt="logo-ARHI-GRUP">
+                    </a>
+                </div>
+
+                <input id="toggle" type="checkbox" />
+                <label class="hamburger" for="toggle">
+                    <div class="top"></div>
+                    <div class="meat"></div>
+                    <div class="bottom"></div>
+                </label>
+
+                <div class="navbar">
+                    <a class="link" href="#work">WORK</a>
+                    <a class="link" href="#about">ABOUT</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="work image-container"></div>
+        <div class="disclaimer">
+            <p>Free photos from <a target="_blank" href="https://unsplash.com/t/architecture-interior">Unsplash</a>.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <!-- footer icons row -->
+        <div class="footer-icons">
+            <div class="footer-item"><a target="_blank" href="https://www.facebook.com/arhi.grup/"><i
+                        class="fa-brands fa-facebook-f fa-lg"></i></a></div>
+            <div class="footer-item"><a target="_blank" href="mailto:office@arhigrup.ro"><i
+                        class="fa-sharp fa-solid fa-envelope fa-lg"></i></a></div>
+            <div class="footer-item"><a target="_blank" href="tel:0040747136629"><i
+                        class="fa-sharp fa-solid fa-phone fa-lg"></i></a>
+            </div>
+            <div class="footer-item"><a target="_blank" href="https://goo.gl/maps/hgt7K1yxxDeCBPs58"><i
+                        class="fa-solid fa-location-dot fa-lg"></i></a></div>
+        </div>
+
+        <div class="footer-contact">
+            <p>office@arhigrup.ro</p>
+            <p>0040 747 13 66 29</p>
+        </div>
+        <!-- copyright and current year -->
+        <div class="footer-contact" id="copyright"></div>
+    </footer>
+</body>
+
+</html>
