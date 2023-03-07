@@ -93,7 +93,7 @@ h1 {
 
 #click {
     animation: lower 3s linear forwards,
-        change-color 2s 4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        change-color 1s 4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 @keyframes upper {
@@ -137,10 +137,8 @@ h1 {
 }
 
 @keyframes see-through {
-    0% {
-        background-position: bottom;
-    }
 
+    0%,
     100% {
         background: url(../images/backdrop.JPG);
         background-position: bottom;
