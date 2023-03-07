@@ -65,19 +65,19 @@ p {
     position: relative;
 }
 
-#g1 {
+#section-1 {
     height: 120vh;
 }
 
-#g2 {
+#section-2 {
     height: 150vh;
 }
 
-#g3 {
+#section-3 {
     height: 100vh;
 }
 
-#g4 {
+#section-4 {
     height: 100vh;
 }
 
@@ -91,7 +91,7 @@ p {
     background-color: var(--main-color);
 }
 
-#g2 .layer {
+#section-2 .layer {
     left: 50%;
     top: 0;
     transform: translate(-50%, 0);
@@ -263,7 +263,7 @@ button:hover {
     bottom: -85px;
 }
 
-#g1 .down-arrow {
+#section-1 .down-arrow {
     top: 85vh;
 }
 
