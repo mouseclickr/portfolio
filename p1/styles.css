@@ -342,20 +342,21 @@ nav {
     transition: all 0.1s ease;
 }
 
-.fa-xl {
+.fa-solid,
+fa-brands {
     color: #051937;
 }
 
 .fa-info {
-    margin: 1.4rem 0 0 1.3rem;
+    margin: .6rem 0 0 -.25rem;
 }
 
 .fa-question {
-    margin: 1.45rem 0 0 1.15rem;
+    margin: .8rem 0 0 -.4rem;
 }
 
 .fa-link {
-    margin: 1.45rem 0 0 .7rem;
+    margin: .8rem 0 0 -.85rem;
 }
 
 
