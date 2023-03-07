@@ -208,6 +208,7 @@ h2 {
     font-weight: 600;
     font-size: clamp(3rem, 5vw, 5rem);
     color: var(--accent-color);
+    margin-top: 30px;
 }
 
 h3 {
@@ -270,7 +271,7 @@ img {
 
 
 .scenario {
-    margin: 30px 0;
+    margin: 30px 0 0;
 }
 
 
