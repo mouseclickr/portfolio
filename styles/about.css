@@ -141,7 +141,7 @@ button {
 }
 
 button a {
-    padding: 15px 0;
+    padding: 10px 0 15px;
     font-size: clamp(1.2rem, 2vw, 2rem);
     font-weight: 600;
 }
