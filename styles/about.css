@@ -141,9 +141,7 @@ button {
 }
 
 button a {
-    display: grid;
-    margin: auto;
-    padding: 10px 0 15px;
+    padding: 15px 0;
     font-size: clamp(1.2rem, 2vw, 2rem);
     font-weight: 600;
 }
