@@ -137,11 +137,12 @@ button {
     border: none;
     width: calc(100% - 30px);
     background-color: #343434;
-    transform: translateX(15px);
+    margin: auto;
 }
 
 button a {
-    display: block;
+    display: grid;
+    margin: auto;
     padding: 10px 0 15px;
     font-size: clamp(1.2rem, 2vw, 2rem);
     font-weight: 600;
