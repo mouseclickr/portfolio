@@ -143,6 +143,7 @@ h1 {
         background: url(../images/backdrop.JPG);
         background-position: bottom;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
     }
 }
