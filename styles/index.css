@@ -83,12 +83,12 @@ h1 {
 
 #welcome {
     animation: upper 3s linear forwards,
-        see-through 2s 4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        see-through 1s 4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 #mouse {
     animation: lower 3s linear forwards,
-        see-through 2s 4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        see-through 1s 4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 #click {
@@ -157,7 +157,7 @@ h1 {
 #welcome::after {
     content: ",";
     opacity: 0;
-    animation: after 2s 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation: after 1s 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 @keyframes after {
