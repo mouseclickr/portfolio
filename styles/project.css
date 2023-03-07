@@ -268,13 +268,12 @@ a:visited {
 
 .title-box {
     background-color: #29BB89;
-    font-size: clamp(1.2rem, 2vw, 2rem);
-    font-weight: bold;
     color: #343434;
-    padding: 0 0 10px 15px;
 }
 
 .title-box p {
+    padding: 0 0 10px 15px;
+    font-weight: bold;
     font-family: 'Mirza', cursive;
     font-size: clamp(1.7rem, 2.5vw, 2.5rem);
 }
