@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- favicon mouseclickr -->
+    <link rel="icon" href="../images/favicon.ico">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/f3b5e98be9.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="up.js" defer></script>
+
+    <title>Website for architects > Project</title>
+</head>
+
+<body>
+    <header>
+        <nav role="navigation">
+
+            <div class="nav-c">
+                <div class="logo">
+                    <a href="home.html">
+                        <img id="logo" src="images/logo.png" alt="company logo">
+                    </a>
+                </div>
+
+                <input id="toggle" type="checkbox" />
+                <label class="hamburger" for="toggle">
+                    <div class="top"></div>
+                    <div class="meat"></div>
+                    <div class="bottom"></div>
+                </label>
+
+                <div class="navbar">
+                    <a class="link" href="work.html">WORK</a>
+                    <a class="link" href="about.html">ABOUT</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project image-container">
+
+            <script type="text/javascript">
+                const imageNr = 30;
+
+                for (let i = 1; i <= imageNr; i++) {
+                    let div = document.createElement("div");
+                    let img = document.createElement("img");
+                    let a = document.createElement("a");
+
+                    img.src = `images/project_page/AG (${i}).jpg`;
+                    img.loading = "lazy";
+                    a.href = `images/project_page/AG (${i}).jpg`;
+                    a.setAttribute("data-fslightbox", "");
+
+                    div.appendChild(a);
+                    a.appendChild(img);
+
+                    document.querySelector(".image-container").appendChild(div);
+                }
+            </script>
+
+        </div>
+
+        <div class="facts">
+
+            <h1 id="f-f">FACTS & FIGURES</h1>
+            <h2 id="f-name">Some Chain Hotel</h2>
+
+            <div class="row-w-4">
+                <div class="f-tag row-w-2">
+                    <h4>hospitality</h4>
+                </div>
+                <div class="f-loc row-w-2">
+                    <h4>
+                        <a target="_blank" href="https://goo.gl/maps/SAiETFDKJazzWAab7">Brașov</a>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row-w-4">
+                <div class="f-year-a row-w-2">
+                    <h3>Appointment:</h3>
+                    <h4>2016</h4>
+                </div>
+                <div class="f-year-c row-w-2">
+                    <h3>Completion:</h3>
+                    <h4>2023</h4>
+                </div>
+            </div>
+
+            <div class="row-w-4">
+                <div class="f-area row-w-2">
+                    <h3>Area:</h3>
+                    <h4>9.500 m²</h4>
+                </div>
+                <div class="f-capacity row-w-2">
+                    <h3>Capacity:</h3>
+                    <h4>110 rooms</h4>
+                </div>
+            </div>
+
+            <h3 id="sow">Scope of Works</h3>
+
+            <div class="row-w-4">
+                <h4>general planner</h4>
+                <h4>concept</h4>
+                <h4>architecture</h4>
+                <h4>interior design</h4>
+            </div>
+
+        </div>
+    </main>
+
+    <aside id="up"></aside>
+
+    <footer>
+        <!-- footer icons row -->
+        <div class="footer-icons">
+            <div class="footer-item"><a target="_blank" href="https://www.facebook.com"><i
+                        class="fa-brands fa-facebook-f fa-lg"></i></a></div>
+            <div class="footer-item"><a target="_blank" href="mailto:office@arhitectura.ro"><i
+                        class="fa-sharp fa-solid fa-envelope fa-lg"></i></a></div>
+            <div class="footer-item"><a target="_blank" href="tel:0040123456789"><i
+                        class="fa-sharp fa-solid fa-phone fa-lg"></i></a>
+            </div>
+            <div class="footer-item"><a target="_blank" href="https://goo.gl/maps/6mXFwLTHPRwam1Yz6"><i
+                        class="fa-solid fa-location-dot fa-lg"></i></a></div>
+        </div>
+
+        <div class="footer-contact">
+            <p>office@arhitectura.ro</p>
+            <p>0040 123 45 67 89</p>
+        </div>
+        <!-- copyright and current year -->
+        <div class="footer-contact" id="copyright"></div>
+    </footer>
+
+    <script src="fslightbox.js"></script>
+
+</body>
+
+</html>
