@@ -174,10 +174,6 @@ a:visited {
         height: 63px;
         animation: slide-medium 2s ease;
     }
-    
-    .title-box {
-        padding: 10px 0 0 15px;
-    }
 }
 
 @media (max-width: 500px) {
@@ -209,7 +205,10 @@ a:visited {
         height: 47px;
         animation: slide-small 2s ease;
     }
-    
+        
+    .title-box {
+        padding: 10px 0 0 15px;
+    }
 }
 
 
