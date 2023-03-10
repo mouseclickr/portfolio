@@ -65,19 +65,19 @@ p {
     position: relative;
 }
 
-#section-1 {
+#screen {
     height: 120vh;
 }
 
-#section-2 {
+#about-me {
     height: 150vh;
 }
 
-#section-3 {
+#see-my-work {
     height: 100vh;
 }
 
-#section-4 {
+#get-in-touch {
     height: 100vh;
 }
 
@@ -91,10 +91,36 @@ p {
     background-color: var(--main-color);
 }
 
-#section-2 .layer {
+#about-me .layer {
     left: 50%;
     top: 0;
     transform: translate(-50%, 0);
+}
+
+@media (max-height:800px) {
+    #screen {
+        height: 100vh;
+    }
+
+    #about-me {
+        height: 220vh;
+    }
+
+    #see-my-work {
+        height: 150vh;
+    }
+
+    #get-in-touch {
+        height: 150vh;
+    }
+
+    #about-me .layer,
+    #see-my-work .layer,
+    #get-in-touch .layer {
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+    }
 }
 
 .forefront {
@@ -263,7 +289,7 @@ button:hover {
     bottom: -85px;
 }
 
-#section-1 .down-arrow {
+#screen .down-arrow {
     top: 85vh;
 }
 
