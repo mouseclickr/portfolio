@@ -137,8 +137,10 @@ h1 {
 }
 
 @keyframes see-through {
+    0% {
+        background-position: bottom;
+    }
 
-    0%,
     100% {
         background: url(../images/backdrop.JPG);
         background-position: bottom;
