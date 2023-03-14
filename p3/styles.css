@@ -18,29 +18,9 @@ a:visited {
     color: #E6B31E;
 }
 
-.back-arrow {
-    position: fixed;
-    background-image: url(images/left-arrow_grey.png);
-    background-position: center;
-    background-size: 40%;
-    background-repeat: no-repeat;
-
-    width: 55px;
-    height: 55px;
-    top: 0;
-    right: calc(5% + 200px);
-    margin: 1rem 1rem 1rem 0;
-}
-
-.back-arrow:hover,
-.back-arrow:active,
-.back-arrow:focus {
-    background-image: url(images/left-arrow_white.png);
-    background-color: #343434;
-    transition: all .5s ease;
-}
 
 html {
+    width: 100vw;
     height: 100%;
     scroll-behavior: smooth;
 }
@@ -55,7 +35,7 @@ body {
 header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 85px;
 
     padding: 15px 5%;
@@ -68,13 +48,11 @@ header {
     float: left;
     cursor: pointer;
     width: 125px;
-    /* margin-left: -7.5px; */
 }
 
 .navbar {
     display: inline-flex;
     float: right;
-    /* margin-right: -7.5px; */
 }
 
 .navbar>a {
@@ -257,9 +235,11 @@ footer {
     --val3: (var(--w3) - 100%) * 1000;
 
     --gap: 10px;
+    --left: 5vw;
+    --right: calc(5vw - (100vw - 100%));
 
     display: grid;
-    margin: 120px 5% 30px;
+    margin: 120px var(--right) 30px var(--left);
 
     grid-template-columns: repeat(auto-fit,
             minmax(clamp(clamp(clamp(var(--v1), var(--val1), var(--v2)), var(--val2), var(--v3)), var(--val3), 100%), 1fr));
@@ -335,9 +315,6 @@ img:focus {
     text-align: center;
     margin: 60px 5% 30px;
     display: grid;
-    /* grid-auto-rows: 50px; */
-    /* grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .facts>div {
@@ -383,19 +360,22 @@ aside {
     position: fixed;
     display: none;
     bottom: calc(153px - var(--up-size));
-    right: 5%;
+    right: calc(5vw - (100vw - 100%));
     cursor: pointer;
     z-index: 2;
 
     background-color: #e6b41e9b;
-    background-image: url(images/up.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    color: #000;
 
     --up-size: 85px;
     width: var(--up-size);
     height: var(--up-size);
     border-radius: 50%;
+    padding-top: 9px;
+
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 /******* ABOUT PAGE *******/
@@ -453,7 +433,6 @@ aside {
         float: right;
         height: 45px;
         margin-top: 3px;
-        /* margin-right: -7.5px; */
         display: grid;
         cursor: pointer;
     }
