@@ -18,6 +18,27 @@ a:visited {
     color: #E6B31E;
 }
 
+.back-arrow {
+    position: fixed;
+    background-image: url(images/left-arrow_grey.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+
+    width: 55px;
+    height: 55px;
+    top: 0;
+    right: calc(5% + 200px);
+    margin: 1rem 1rem 1rem 0;
+}
+
+.back-arrow:hover,
+.back-arrow:active,
+.back-arrow:focus {
+    background-image: url(images/left-arrow_white.png);
+    background-color: #343434;
+    transition: all .5s ease;
+}
 
 html {
     width: 100vw;
