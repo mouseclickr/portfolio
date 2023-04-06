@@ -473,7 +473,7 @@ aside {
 
     #toggle:checked+.hamburger .meat {
         transform: rotate(45deg);
-        margin-top: -5px;
+        margin-top: -6px;
     }
 
     #toggle:checked+.hamburger .bottom {
