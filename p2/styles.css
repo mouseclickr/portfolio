@@ -173,7 +173,7 @@ h1 {
         deleting 2s 5s steps(20, end) forwards,
         blink-caret .3s step-end infinite alternate,
         fader .1s 8s forwards; */
-    animation: typing 2s 1s steps(20, end) forwards,
+    animation: typing 2s 1s steps(23, end) forwards,
         blink-caret .3s step-end infinite alternate;
 }
 
