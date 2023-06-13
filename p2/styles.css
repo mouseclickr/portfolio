@@ -173,13 +173,13 @@ h1 {
         deleting 2s 5s steps(20, end) forwards,
         blink-caret .3s step-end infinite alternate,
         fader .1s 8s forwards; */
-    animation: typing 2s 1s steps(22, end) forwards,
+    animation: typing 2s 1s steps(18, end) forwards,
         blink-caret .3s step-end infinite alternate;
 }
 
 @keyframes typing {
     to {
-        width: 20ch;
+        width: 18ch;
     }
 }
 
